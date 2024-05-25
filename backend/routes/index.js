@@ -27,7 +27,6 @@ const predictOptimal = () => {
 
 // Function to fetch current weather data (mock implementation)
 const fetchCurrentWeather = async () => {
-    // Mock implementation; replace with actual API call
     return {
         temperature: 25, // Replace with actual data
         weather: "Sunny", // Replace with actual data
@@ -47,6 +46,15 @@ router.get('/home', async (req, res) => {
         predictions,
         weather,
         currentTime
+    });
+});
+
+// Analytics page route
+router.get('/analytics', (req, res) => {
+    const sensorData = fetchLiveSensorData();
+    res.render('analytics', {
+        title: 'Analytics',
+        sensorData
     });
 });
 

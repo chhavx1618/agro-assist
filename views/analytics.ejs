@@ -11,8 +11,6 @@
     <div class="analytics">
         <h2>Analytics Section</h2>
         <p>Welcome to the analytics section where you can find detailed insights about your farm.</p>
-
-        <p>Here, you can find the live data of your farm and soil.</p>
         <ul>
             <li>Temperature: <%= sensorData.temperature.toFixed(2) %> °C</li>
             <li>Moisture: <%= sensorData.moisture.toFixed(2) %> %</li>
@@ -20,6 +18,6 @@
             <li>pH: <%= sensorData.ph.toFixed(2) %></li>
         </ul>
     </div>
-    <a href="/">Back to Home</a>
+    <a href="/home">Back to Home</a>
 </body>
 </html>

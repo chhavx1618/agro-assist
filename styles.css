@@ -1,0 +1,51 @@
+/* src/App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #659355;
+    color: white;
+    padding: 1rem;
+  } 
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-items {
+    display: inline;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .nav-items a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .weather-box {
+    margin: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  .home, .analytics, .history {
+    margin: 2rem;
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  
