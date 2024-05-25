@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+    <title></title>
+    <link rel="stylesheet" href=".src/styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <h1>Welcome to Agro-Assist</h1>
     <div id="live-data">
         <h2>Live Sensor Data</h2>
         <ul>
-            <li>Temperature: <%= sensorData.temperature.toFixed(2) %> °C</li>
-            <li>Moisture: <%= sensorData.moisture.toFixed(2) %> %</li>
-            <li>Humidity: <%= sensorData.humidity.toFixed(2) %> %</li>
-            <li>pH: <%= sensorData.ph.toFixed(2) %></li>
+            <li>Temperature: <%= sensorData.temperature %> °C</li>
+            <li>Moisture: <%= sensorData.moisture %> %</li>
+            <li>Humidity: <%= sensorData.humidity %> %</li>
+            <li>pH: <%= sensorData.ph %></li>
         </ul>
     </div>
     <div id="predictions">
         <h2>Predictions</h2>
         <ul>
-            <li>Temperature: <%= predictions.temperature.toFixed(2) %> °C</li>
-            <li>Moisture: <%= predictions.moisture.toFixed(2) %> %</li>
-            <li>Humidity: <%= predictions.humidity.toFixed(2) %> %</li>
-            <li>pH: <%= predictions.ph.toFixed(2) %></li>
+            <li>Temperature: <%= predictions.temperature %> °C</li>
+            <li>Moisture: <%= predictions.moisture %> %</li>
+            <li>Humidity: <%= predictions.humidity %> %</li>
+            <li>pH: <%= predictions.ph %></li>
         </ul>
     </div>
     <div id="current-weather">

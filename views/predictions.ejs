@@ -8,11 +8,26 @@
 </head>
 <body>
     <h1>Predictions</h1>
+    <h3>Predictions for data 6 hours from now</h3>
     <ul>
-        <li>Temperature: <%= predictions.temperature %> °C</li>
-        <li>Moisture: <%= predictions.moisture %> %</li>
-        <li>Humidity: <%= predictions.humidity %> %</li>
-        <li>pH: <%= predictions.ph %></li>
+        <li>Temperature: <%= predictions.predictions6Hours.temperature.toFixed(2) %> °C</li>
+        <li>Moisture: <%= predictions.predictions6Hours.moisture.toFixed(2) %> %</li>
+        <li>Humidity: <%= predictions.predictions6Hours.humidity.toFixed(2) %> %</li>
+        <li>pH: <%= predictions.predictions6Hours.ph.toFixed(2) %></li>
+    </ul>
+    <h3>Predictions for data 12 hours from now</h3>
+    <ul>
+        <li>Temperature: <%= predictions.predictions12Hours.temperature.toFixed(2) %> °C</li>
+        <li>Moisture: <%= predictions.predictions12Hours.moisture.toFixed(2) %> %</li>
+        <li>Humidity: <%= predictions.predictions12Hours.humidity.toFixed(2) %> %</li>
+        <li>pH: <%= predictions.predictions12Hours.ph.toFixed(2) %></li>
+    </ul>
+    <h3>Predictions for data 24 hours from now</h3>
+    <ul>
+        <li>Temperature: <%= predictions.predictions24Hours.temperature.toFixed(2) %> °C</li>
+        <li>Moisture: <%= predictions.predictions24Hours.moisture.toFixed(2) %> %</li>
+        <li>Humidity: <%= predictions.predictions24Hours.humidity.toFixed(2) %> %</li>
+        <li>pH: <%= predictions.predictions24Hours.ph.toFixed(2) %></li>
     </ul>
     <a href="/">Back to Home</a>
 </body>
