@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 //const { predictOptimalAction } = require('./predict'); // Import function to predict optimal actions
 //const tf = require('@tensorflow/tfjs-node');
 
+console.log("check")
 
 const app = express();
 
@@ -11,7 +12,9 @@ const app = express();
 app.use(bodyParser.json());
 
 // Serve the React frontend
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/src')));
+
+console.log("check")
 
 
 // // Function to load the trained model
@@ -30,7 +33,7 @@ app.use(express.static(path.join(__dirname, '../frontend/build')));
   
 //   module.exports = { loadModel };
 
-
+console.log("check")
 
 // Function to fetch live sensor data (mock implementation)
 const fetchLiveSensorData = () => {
@@ -45,6 +48,9 @@ const fetchLiveSensorData = () => {
     console.log(fetchLiveSensorData)
     return sensorData;
   };
+  console.log("check")
+  fetchLiveSensorData()
+  console.log("check")
   
   // API endpoint to fetch live sensor data
   app.get('/api/sensor-data', (req, res) => {
@@ -89,7 +95,7 @@ app.get('/api/predictions', (req, res) => {
 
 // Catch-all endpoint to serve the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/src'));
+  res.sendFile(path.join(__dirname, '../frontend/src'));
 });
 
 // Start the server
