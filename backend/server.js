@@ -16,10 +16,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Define routes
 app.use('/', require('./routes/index'));
-// Define routes
 app.use('/sensor-data', require('./routes/sensorData'));
 app.use('/predictions', require('./routes/predictions'));
-
 
 // Start the server
 const PORT = process.env.PORT || 5000;
