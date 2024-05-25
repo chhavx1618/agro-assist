@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import WeatherBox from './WeatherBox';
-import Analytics from './Analytics';
+import Predictions from './Predictions';
 import './App.css';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
                     <nav>
                         <ul className="nav-list">
                             <li className="nav-items"><Link to="/">Home</Link></li>
-                            <li className="nav-items"><Link to="/analytics">Analytics</Link></li>
+                            <li className="nav-items"><Link to="/Predictions">Analytics</Link></li>
                             <li className="nav-items"><Link to="/history">History</Link></li>
                         </ul>
                     </nav>
@@ -31,7 +31,7 @@ const App = () => {
                             </div>
                         </div>
                     } />
-                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/Predictions" element={<Predictions />} />
                     <Route path="/history" element={
                         <div className="history">
                             <h2>History Section</h2>

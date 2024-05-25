@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Serve the React frontend
-app.use(express.static(path.join(__dirname, '../frontend/src')));
+app.use(express.static(path.join(__dirname, '../src')));
 
 console.log("check")
 
@@ -95,7 +95,7 @@ app.get('/api/predictions', (req, res) => {
 
 // Catch-all endpoint to serve the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/src'));
+  res.sendFile(path.join(__dirname, '../src'));
 });
 
 // Start the server
