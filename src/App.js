@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import WeatherBox from './WeatherBox';
 import Predictions from './Predictions';
-import './App.css';
+import './styles.css';
 
 const App = () => {
     return (
