@@ -10,7 +10,8 @@ const App = () => {
         <Router>
             <div>
                 <div className="navbar">
-                    <h1>Farm Management</h1>
+                    <h1>Agro Assit</h1>
+                    <p>Cultivate Success</p>
                     <nav>
                         <ul className="nav-list">
                             <li className="nav-items"><Link to="/">Home</Link></li>
@@ -26,9 +27,6 @@ const App = () => {
                                 {/* You can add quote content here */}
                             </div>
                             <WeatherBox />
-                            <div className="analysis">
-                                {/* You can add analysis content here */}
-                            </div>
                         </div>
                     } />
                     <Route path="/Predictions" element={<Predictions />} />

@@ -1,10 +1,12 @@
 /* src/App.css */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #659355;
   color: white;
   padding: 1rem;
 }
@@ -25,26 +27,24 @@ body {
   text-decoration: none;
 }
 
-.nav-items:hover{
-  background-color: rgb(7, 7, 7);
-  color:black;
-  padding: 5px 5px 5px 5px;
-  border-radius: 3px;
+.app {
+  display: flex;
+  flex-direction: column;
 }
+
+.main-content {
+  display: flex;
+}
+
 .weather-box {
   margin: 2rem;
   padding: 1rem;
   border: 1px solid #ccc;
+  width: 200px;
 }
 
-.analytics {
+.home, .analytics, .history {
   margin: 2rem;
   padding: 1rem;
-  border: 1px solid #ccc;
-}
-
-.history {
-  margin: 2rem;
-  padding: 1rem;
-  border: 1px solid #ccc;
+  flex-grow: 1;
 }
