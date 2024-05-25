@@ -1,0 +1,50 @@
+/* src/App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-items {
+  display: inline;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.nav-items a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-items:hover{
+  background-color: rgb(7, 7, 7);
+  color:black;
+  padding: 5px 5px 5px 5px;
+  border-radius: 3px;
+}
+.weather-box {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.analytics {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.history {
+  margin: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
