@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const { predictOptimalAction } = require('./predict'); // Import function to predict optimal actions
-const tf = require('@tensorflow/tfjs-node');
+//const { predictOptimalAction } = require('./predict'); // Import function to predict optimal actions
+//const tf = require('@tensorflow/tfjs-node');
 
 
 const app = express();
@@ -11,24 +11,24 @@ const app = express();
 app.use(bodyParser.json());
 
 // Serve the React frontend
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 
-// Function to load the trained model
-const loadModel = async () => {
-    try {
-      // Load the model from the specified path
-      const model = await tf.loadLayersModel('/model/farm_health_model_nn.h5');
+// // Function to load the trained model
+// const loadModel = async () => {
+//     try {
+//       // Load the model from the specified path
+//       const model = await tf.loadLayersModel('/model/farm_health_model_nn.h5');
   
-      console.log('Model loaded successfully');
-      return model;
-    } catch (error) {
-      console.error('Error loading the model:', error);
-      throw error;
-    }
-  };
+//       console.log('Model loaded successfully');
+//       return model;
+//     } catch (error) {
+//       console.error('Error loading the model:', error);
+//       throw error;
+//     }
+//   };
   
-  module.exports = { loadModel };
+//   module.exports = { loadModel };
 
 
 
@@ -42,7 +42,7 @@ const fetchLiveSensorData = () => {
       ph: Math.random() * (8.5 - 4.5) + 4.5, // Random pH between 4.5 and 8.5
       // Add more sensor data fields as needed
     };
-  
+    console.log(fetchLiveSensorData)
     return sensorData;
   };
   
@@ -68,10 +68,11 @@ const predictOptimal = () => {
         // Add more sensor data fields as needed
         // return temperature, moisture, humidity, ph;
       };
+      console.log(adjustedSensorData)
   
       // Log adjusted sensor data
       return adjustedSensorData;
-      
+
     } catch (error) {
       console.error('Error predicting optimal action:', error);
     }
@@ -88,7 +89,7 @@ app.get('/api/predictions', (req, res) => {
 
 // Catch-all endpoint to serve the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/src'));
+  res.sendFile(path.join(__dirname, '../frontend/build/src'));
 });
 
 // Start the server
