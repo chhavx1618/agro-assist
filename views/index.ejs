@@ -124,6 +124,19 @@
 <body>
     <!-- <img src="images/Agro Assist logo.png"  class="logo"> -->
     <h1 class="heading">Welcome to Agro-Assist</h1>
+    <img src="images/Agro Assist logo.png"  class="logo">
+    <!-- <h1 class="heading">Welcome to Agro-Assist</h1> -->
+    <div id="current-weather">
+        <h2 class="dataheading" data-hover-text="Current weather information">Current Weather</h2>
+        <ul>
+            <li class="data">Temperature: <%= weather.temperature %> °C</li>
+            <li class="data">Weather: <%= weather.weather %></li>
+        </ul>
+    </div>
+    <div id="current-time">
+        <h2 class="dataheading" data-hover-text="Current local time">Current Time</h2>
+        <p class="data"><%= currentTime %></p>
+    </div>
     <div id="live-data" class="livedata">
         <h2 class="dataheading" data-hover-text="Current real-time sensor readings">Live Sensor Data</h2>
         <ul>
@@ -141,17 +154,6 @@
             <li class="data">Humidity: <%= predictions.humidity %> %</li>
             <li class="data">pH: <%= predictions.ph %></li>
         </ul>
-    </div>
-    <div id="current-weather">
-        <h2 class="dataheading" data-hover-text="Current weather information">Current Weather</h2>
-        <ul>
-            <li class="data">Temperature: <%= weather.temperature %> °C</li>
-            <li class="data">Weather: <%= weather.weather %></li>
-        </ul>
-    </div>
-    <div id="current-time">
-        <h2 class="dataheading" data-hover-text="Current local time">Current Time</h2>
-        <p class="data"><%= currentTime %></p>
     </div>
     <footer><button class="button"><a href="/analytics">Go to Analytics</a></button></footer>
 </body>
