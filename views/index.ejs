@@ -1,108 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <style>
-        body{
-            background-color: rgb(196, 242, 183);
-            padding: 0;
-            margin: 0;
-        }
-        .heading {
-            background-color: rgb(3, 102, 3);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 2.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            margin: 20px;
-        }
-        
-        .data{
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: large;
-            margin-top: 20px;
-            color: rgb(3, 102, 3);
-        }
-
-        .dataheading {
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: larger;
-            margin-top: 20px;
-            color: rgb(3, 102, 3);
-        }
-
-        .button {
-            background-color: rgb(3, 102, 3);
-            color: white;
-            border: none;
-            border-radius: 13px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-            text-align: center;
-        }
-
-        .button:hover {
-            background-color: rgb(1, 80, 1);
-        }
-
-        .button a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .livedata, #predictions, #current-weather, #current-time {
-            margin: 20px;
-        }
-    </style> 
-</head>
-<body>
-    <h1 class="heading">Welcome to Agro-Assist</h1>
-    <div id="live-data" class="livedata">
-        <h2 class="dataheading">Live Sensor Data</h2>
-        <ul>
-            <li class="data">Temperature: <%= sensorData.temperature %> °C</li>
-            <li class="data">Moisture: <%= sensorData.moisture %> %</li>
-            <li class="data">Humidity: <%= sensorData.humidity %> %</li>
-            <li class="data">pH: <%= sensorData.ph %></li>
-        </ul>
-    </div>
-    <div id="predictions">
-        <h2 class="dataheading">Predictions</h2>
-        <ul>
-            <li class="data">Temperature: <%= predictions.temperature %> °C</li>
-            <li class="data">Moisture: <%= predictions.moisture %> %</li>
-            <li class="data">Humidity: <%= predictions.humidity %> %</li>
-            <li class="data">pH: <%= predictions.ph %></li>
-        </ul>
-    </div>
-    <div id="current-weather">
-        <h2 class="dataheading">Current Weather</h2>
-        <ul>
-            <li class="data">Temperature: <%= weather.temperature %> °C</li>
-            <li class="data">Weather: <%= weather.weather %></li>
-        </ul>
-    </div>
-    <div id="current-time" >
-        <h2 class="dataheading">Current Time</h2>
-        <p class="data"><%= currentTime %></p>
-    </div>
-    <footer><button class="button"><a href="/analytics">Go to Analytics</a></button></footer>
-    
-    
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -215,7 +110,7 @@
             background-color: rgb(215, 235, 215);
         }
 
-        .logo {
+        /* .logo {
             display: block;
             margin: 0 auto;
             width: 200px;
@@ -223,7 +118,7 @@
             border-radius:10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             
-        }
+        } */
     </style>
 </head>
 <body>
@@ -273,6 +168,7 @@
         <li>pH: <%= predictions.predictions24Hours.ph.toFixed(2) %></li>
     </ul>
     </div>
-    <footer><button class="button"><a href="/analytics">Go to Analytics</a></button></footer>
+    <footer><button class="button"><a href="/analytics">Go to Analytics</a></button>
+        <button class="button"><a href="/predictions">Go to Predictions</a></button></footer>
 </body>
 </html>
