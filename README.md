@@ -22,16 +22,11 @@ Sensors are deployed throughout your field and on the soil to measure the levels
 
 ## Screen shots
 
-<table>
-  <tr>
-    <td><img src="https://github.com/username/repo/blob/main/images/image1.png" alt="Image 1" width="200"></td>
-    <td><img src="https://github.com/username/repo/blob/main/images/image2.png" alt="Image 2" width="200"></td>
-    <td><img src="https://github.com/username/repo/blob/main/images/image3.png" alt="Image 3" width="200"></td>
-  </tr>
-</table>
 
-
-<img src="https://github.com/username/repo/blob/main/images/resized-image.png" alt="Resized Image" width="400" height="300">
+![Screenshot (2226)](https://github.com/chhavx1618/agro-assist/assets/146485755/c305f612-ec81-4769-b407-278b5cf09236)
+![Screenshot (2227)](https://github.com/chhavx1618/agro-assist/assets/146485755/4233f805-a3ec-4b53-838a-3965f487866a)
+![Screenshot (2228)](https://github.com/chhavx1618/agro-assist/assets/146485755/912d0bb9-1a86-4af2-8b5c-f2ae251475b5)
+![Screenshot (2225)](https://github.com/chhavx1618/agro-assist/assets/146485755/2e55272f-5196-47a4-af77-5e307c8f2e5c)
 
 
 
