@@ -95,12 +95,71 @@
     <div class="live-sensor-data">
         <h2 class="dataheading" data-hover-text="Current real-time sensor readings">Live Sensor Data</h2>
         <ul>
-            <li>Temperature: <%= sensorData.temperature.toFixed(2) %> °C</li>
-            <li>Moisture: <%= sensorData.moisture.toFixed(2) %> %</li>
-            <li>Humidity: <%= sensorData.humidity.toFixed(2) %> %</li>
-            <li>pH: <%= sensorData.ph.toFixed(2) %></li>
+            <li>
+                Temperature: <%= sensorData.temperature.toFixed(2) %> °C
+                <p id="temperature-comment" class="data"></p>
+            </li>
+            <li>
+                Moisture: <%= sensorData.moisture.toFixed(2) %> %
+                <p id="moisture-comment" class="data"></p>
+            </li>
+            <li>
+                Humidity: <%= sensorData.humidity.toFixed(2) %> %
+                <p id="humidity-comment" class="data"></p>
+            </li>
+            <li>
+                pH: <%= sensorData.ph.toFixed(2) %>
+                <p id="ph-comment" class="data"></p>
+            </li>
         </ul>
     </div>
+    <script>
+        var temperature = <%- JSON.stringify(sensorData.temperature.toFixed(2)) %>;
+        var moisture = <%- JSON.stringify(sensorData.moisture.toFixed(2)) %>;
+        var humidity = <%- JSON.stringify(sensorData.humidity.toFixed(2)) %>;
+        var ph = <%- JSON.stringify(sensorData.ph.toFixed(2)) %>;
+
+        var temperatureComment = '';
+        if (temperature >= 25 && temperature < 30) {
+            temperatureComment = "It's pleasant.";
+        } else if (temperature >= 30 && temperature < 35) {
+            temperatureComment = "It's kinda hot.";
+        } else if (temperature >= 35 && temperature < 40) {
+            temperatureComment = "Stay in! Really hot today.";
+        } else if (temperature >= 40) {
+            temperatureComment = "It's too hot.";
+        }
+        document.getElementById('temperature-comment').innerText = temperatureComment;
+
+        var moistureComment = '';
+        if (moisture >= 30 && moisture < 50) {
+            moistureComment = "Moisture levels are optimal.";
+        } else if (moisture >= 50 && moisture < 60) {
+            moistureComment = "Moisture levels are slightly high.";
+        } else if (moisture >= 60 && moisture <= 80) {
+            moistureComment = "Moisture levels are very high.";
+        }
+        document.getElementById('moisture-comment').innerText = moistureComment;
+
+        var humidityComment = '';
+        if (humidity >= 50 && humidity < 60) {
+            humidityComment = "Humidity is in a comfortable range.";
+        } else if (humidity >= 60 && humidity < 70) {
+            humidityComment = "Humidity is slightly high.";
+        } else if (humidity >= 70 && humidity <= 80) {
+            humidityComment = "Humidity is very high.";
+        }
+        document.getElementById('humidity-comment').innerText = humidityComment;
+
+        var phComment = '';
+        if (ph >= 5.5 && ph < 6.5) {
+            phComment = "Soil pH is slightly acidic.";
+        } else if (ph >= 6.5 && ph < 7.5) {
+            phComment = "Soil pH is neutral.";
+        } else if (ph >= 7.5) {
+            phComment = "Soil pH is alkaline.";
+        }
+        document.getElementById('ph-comment').innerText = phComment;
+    </script>
 </body>
 </html>
-
