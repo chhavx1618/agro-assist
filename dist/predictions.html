@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+    <style>
+        body {
+            background-color: rgb(196, 242, 183);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .heading {
+            background-color: rgb(3, 102, 3);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .dataheading {
+            color: rgb(3, 102, 3);
+            margin-top: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dataheading::after {
+            content: attr(data-hover-text);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            white-space: nowrap;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transform: translateY(10px);
+            z-index: 1;
+        }
+
+        .dataheading:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .data {
+            font-size: large;
+            margin-top: 20px;
+            color: rgb(3, 102, 3);
+        }
+
+        .button {
+            background-color: rgb(3, 102, 3);
+            color: white;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: rgb(1, 80, 1);
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .predictions-section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgb(235, 245, 235);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        li:hover {
+            background-color: rgb(215, 235, 215);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Predictions</h1>
+    <div class="predictions-section">
+        <h2 class="dataheading" data-hover-text="Predictions for data 6 hours from now">Predictions for data 6 hours from now</h2>
+        <ul>
+            <li class="data">Temperature: 23.00 °C</li>
+            <li class="data">Moisture: 54.00 %</li>
+            <li class="data">Humidity: 59.00 %</li>
+            <li class="data">pH: 7.10</li>
+        </ul>
+        <h2 class="dataheading" data-hover-text="Predictions for data 12 hours from now">Predictions for data 12 hours from now</h2>
+        <ul>
+            <li class="data">Temperature: 24.00 °C</li>
+            <li class="data">Moisture: 53.00 %</li>
+            <li class="data">Humidity: 58.00 %</li>
+            <li class="data">pH: 7.20</li>
+        </ul>
+        <h2 class="dataheading" data-hover-text="Predictions for data 24 hours from now">Predictions for data 24 hours from now</h2>
+        <ul>
+            <li class="data">Temperature: 25.00 °C</li>
+            <li class="data">Moisture: 52.00 %</li>
+            <li class="data">Humidity: 57.00 %</li>
+            <li class="data">pH: 7.30</li>
+        </ul>
+    </div>
+    <footer>
+        <button class="button"><a href="/home">Back to Home</a></button>
+        <button class="button"><a href="/analytics">Go to Analytics</a></button>
+    </footer>
+</body>
+</html>

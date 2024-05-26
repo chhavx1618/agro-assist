@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Page</title>
+    <style>
+        body {
+            background-color: rgb(196, 242, 183);
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        h1 {
+            background-color: rgb(3, 102, 3);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        h2 {
+            color: rgb(3, 102, 3);
+            margin-top: 20px;
+        }
+
+        .analytics, .live-sensor-data {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .live-sensor-data ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .live-sensor-data li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgb(235, 245, 235);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .live-sensor-data li:hover {
+            background-color: rgb(215, 235, 215);
+        }
+
+        .dataheading {
+            font-size: large;
+            margin-top: 20px;
+            color: rgb(3, 102, 3);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .dataheading::after {
+            content: attr(data-hover-text);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            white-space: nowrap;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transform: translateY(10px);
+            z-index: 1;
+        }
+
+        .dataheading:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .button {
+            background-color: rgb(3, 102, 3);
+            color: white;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            align-items: center;
+        }
+
+        .button:hover {
+            background-color: rgb(1, 80, 1);
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Analytics Page</h1>
+    <div class="analytics">
+        <h2 class="dataheading" data-hover-text="Insights about your farm">Analytics Section</h2>
+        <p>Welcome to the analytics section where you can find detailed insights about your farm.</p>
+    </div>
+    <div class="live-sensor-data">
+        <h2 class="dataheading" data-hover-text="Current real-time sensor readings">Live Sensor Data</h2>
+        <ul>
+            <li>
+                Temperature: 22.00 °C
+                <p id="temperature-comment" class="data"></p>
+            </li>
+            <li>
+                Moisture: 55.00 %
+                <p id="moisture-comment" class="data"></p>
+            </li>
+            <li>
+                Humidity: 60.00 %
+                <p id="humidity-comment" class="data"></p>
+            </li>
+            <li>
+                pH: 7.00
+                <p id="ph-comment" class="data"></p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var temperature = "22.00";
+        var moisture = "55.00";
+        var humidity = "60.00";
+        var ph = "7.00";
+
+        var temperatureComment = '';
+        if (temperature >= 25 && temperature < 30) {
+            temperatureComment = "It's pleasant.";
+        } else if (temperature >= 30 && temperature < 35) {
+            temperatureComment = "It's kinda hot.";
+        } else if (temperature >= 35 && temperature < 40) {
+            temperatureComment = "Stay in! Really hot today.";
+        } else if (temperature >= 40) {
+            temperatureComment = "It's too hot.";
+        }
+        document.getElementById('temperature-comment').innerText = temperatureComment;
+
+        var moistureComment = '';
+        if (moisture >= 30 && moisture < 50) {
+            moistureComment = "Moisture levels are optimal.";
+        } else if (moisture >= 50 && moisture < 60) {
+            moistureComment = "Moisture levels are slightly high.";
+        } else if (moisture >= 60 && moisture <= 80) {
+            moistureComment = "Moisture levels are very high.";
+        }
+        document.getElementById('moisture-comment').innerText = moistureComment;
+
+        var humidityComment = '';
+        if (humidity >= 50 && humidity < 60) {
+            humidityComment = "Humidity is in a comfortable range.";
+        } else if (humidity >= 60 && humidity < 70) {
+            humidityComment = "Humidity is slightly high.";
+        } else if (humidity >= 70 && humidity <= 80) {
+            humidityComment = "Humidity is very high.";
+        }
+        document.getElementById('humidity-comment').innerText = humidityComment;
+
+        var phComment = '';
+        if (ph >= 5.5 && ph < 6.5) {
+            phComment = "Soil pH is slightly acidic.";
+        } else if (ph >= 6.5 && ph < 7.5) {
+            phComment = "Soil pH is neutral.";
+        } else if (ph >= 7.5) {
+            phComment = "Soil pH is alkaline.";
+        }
+        document.getElementById('ph-comment').innerText = phComment;
+    </script>
+    <footer>
+        <button class="button"><a href="/home">Back to Home</a></button>
+        <button class="button"><a href="/predictions">Go to Predictions</a></button>
+    </footer>
+</body>
+</html>
