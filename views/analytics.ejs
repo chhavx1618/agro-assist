@@ -84,6 +84,33 @@
             transform: translateY(0);
         }
 
+        .button {
+            background-color: rgb(3, 102, 3);
+            color: white;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            align-items: center;
+        }
+
+        .button:hover {
+            background-color: rgb(1, 80, 1);
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -161,5 +188,9 @@
         }
         document.getElementById('ph-comment').innerText = phComment;
     </script>
+    <footer>
+        <button class="button"><a href="/home">Back to Home</a></button>
+        <button class="button"><a href="/predictions">Go to Predictions</a></button>
+    </footer>
 </body>
 </html>
