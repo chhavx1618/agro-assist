@@ -22,6 +22,17 @@ Sensors are deployed throughout your field and on the soil to measure the levels
 
 ## Screen shots
 
+<table>
+  <tr>
+    <td><img src="https://github.com/username/repo/blob/main/images/image1.png" alt="Image 1" width="200"></td>
+    <td><img src="https://github.com/username/repo/blob/main/images/image2.png" alt="Image 2" width="200"></td>
+    <td><img src="https://github.com/username/repo/blob/main/images/image3.png" alt="Image 3" width="200"></td>
+  </tr>
+</table>
+
+
+<img src="https://github.com/username/repo/blob/main/images/resized-image.png" alt="Resized Image" width="400" height="300">
+
 
 
 ## Tech used
