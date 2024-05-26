@@ -140,7 +140,7 @@
         <p>Hello Farmer!
             Hope you are having a great day!
             Let's see how is the day going - 
-            
+
             <% if (sensorData.temperature > 35) { %>
                 It's pretty hot today. Make sure to check in on your plants in this heat.
             <% } %>
@@ -164,10 +164,10 @@
     <div id="live-data" class="livedata">
         <h2 class="dataheading" data-hover-text="Current real-time sensor readings">Live Sensor Data</h2>
         <ul>
-            <li class="data">Temperature: <%= sensorData.temperature %> °C</li>
-            <li class="data">Moisture: <%= sensorData.moisture %> %</li>
-            <li class="data">Humidity: <%= sensorData.humidity %> %</li>
-            <li class="data">pH: <%= sensorData.ph %></li>
+            <li class="data">Temperature: <%= sensorData.temperature.toFixed(2) %> °C</li>
+            <li class="data">Moisture: <%= sensorData.moisture.toFixed(2) %> %</li>
+            <li class="data">Humidity: <%= sensorData.humidity.toFixed(2) %> %</li>
+            <li class="data">pH: <%= sensorData.ph.toFixed(2) %></li>
         </ul>
     </div>
     <div id="predictions">

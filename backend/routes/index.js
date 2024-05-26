@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+
+
 const fetchLiveSensorData = () => {
     const sensorData = {
         temperature: Math.random() * (40 - 25) + 25, // Temperature between 25 and 40
